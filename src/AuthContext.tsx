@@ -13,6 +13,7 @@ export const AuthContext = React.createContext<AuthContextProps | undefined>(
 )
 
 export const useAuth = (): AuthContextProps => {
+  console.log('Inside USE AUTH function from npm lib')
   const context = useContext(AuthContext)
   if (context === undefined) {
     throw new Error('useAuth must be used within a AuthProvider')
